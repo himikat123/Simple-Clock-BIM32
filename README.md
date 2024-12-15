@@ -65,6 +65,8 @@ You can connect one, several, or all of the sensors from this list. It's also re
 ## Wireless Sensor Connection Diagram 
 The **clock** can also be connected to **[wireless sensors](https://github.com/himikat123/Radio-sensor)** by adding the **HC-12** radio module, following the diagram below.
 
+<p align="center"><img src="img/radio_v5.2.png" width="400" alt="simple clock BIM32 radio channel"></p>
+
 ## Home Climate Control Device Connection Diagram 
 To control the climate in your home, you can connect a humidifier and dehumidifier, as well as a heater, cooler (fan or air conditioner), and air purifier. I can't provide a connection diagram for these devices because it depends on how the control is implemented in each specific device (remote control, buttons, voltage). However, I will outline on which pins of the **PCF8574** the logic high signals will appear when each device needs to be turned on.
 
@@ -73,7 +75,7 @@ To control the climate in your home, you can connect a humidifier and dehumidifi
 ## Sound Module Connection Diagram 
 To enable the alarm and speaking clock sounds, the **DF-Player mini** MP3 player module is used, with the connection diagram provided below. You will need to copy all contents from the **SDcard folder** onto a **micro-SD card**, formatted in **FAT32**. If sound is not required, connect the ESP32's GPIO18 pin to ground.
 
-<p align="center"><img src="img/mp3player_v4.3.png" width="400" alt="simple clock BIM32 MP3-player"></p>
+<p align="center"><img src="img/mp3player_v5.2.png" width="400" alt="simple clock BIM32 MP3-player"></p>
 
 During use, an unpleasant issue with the MP3 player module was discovered: it produces constant low noise. To eliminate the noise, the resistor needs to be resoldered from position A to position B, as shown in the photo below. This switches the MUTE input of the amplifier to the BUSY output, which produces a logic signal only when sound is playing.
 
